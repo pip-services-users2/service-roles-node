@@ -1,0 +1,8 @@
+/node_modules
+/npm-debug.log
+/.idea
+/data/roles.test.json
+/data/roles.json
+/obj/test
+/docker/id_rsa*
+package-lock.json
