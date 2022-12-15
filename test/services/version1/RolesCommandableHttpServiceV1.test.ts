@@ -7,7 +7,7 @@ import { References } from 'pip-services3-commons-nodex';
 
 import { RolesMemoryPersistence } from '../../../src/persistence/RolesMemoryPersistence';
 import { RolesController } from '../../../src/logic/RolesController';
-import { RolesHttpServiceV1 } from '../../../src/services/version1/RolesHttpServiceV1';
+import { RolesCommandableHttpServiceV1 } from '../../../src/services/version1/RolesCommandableHttpServiceV1';
 
 let httpConfig = ConfigParams.fromTuples(
     "connection.protocol", "http",
@@ -17,9 +17,9 @@ let httpConfig = ConfigParams.fromTuples(
 
 let ROLES = ['Role 1', 'Role 2', 'Role 3'];
 
-suite('RolesHttpServiceV1', ()=> {
+suite('RolesCommandableHttpServiceV1', ()=> {
     let persistence: RolesMemoryPersistence;
-    let service: RolesHttpServiceV1;
+    let service: RolesCommandableHttpServiceV1;
 
     let rest: any;
 
@@ -27,7 +27,7 @@ suite('RolesHttpServiceV1', ()=> {
         persistence = new RolesMemoryPersistence();
         let controller = new RolesController();
 
-        service = new RolesHttpServiceV1();
+        service = new RolesCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(

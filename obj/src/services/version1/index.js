@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RolesGrpcServiceV1 = exports.RolesCommandableGrpcServiceV1 = exports.RolesHttpServiceV1 = void 0;
-var RolesHttpServiceV1_1 = require("./RolesHttpServiceV1");
-Object.defineProperty(exports, "RolesHttpServiceV1", { enumerable: true, get: function () { return RolesHttpServiceV1_1.RolesHttpServiceV1; } });
+exports.RolesGrpcServiceV1 = exports.RolesCommandableGrpcServiceV1 = exports.RolesCommandableHttpServiceV1 = void 0;
+var RolesCommandableHttpServiceV1_1 = require("./RolesCommandableHttpServiceV1");
+Object.defineProperty(exports, "RolesCommandableHttpServiceV1", { enumerable: true, get: function () { return RolesCommandableHttpServiceV1_1.RolesCommandableHttpServiceV1; } });
 var RolesCommandableGrpcServiceV1_1 = require("./RolesCommandableGrpcServiceV1");
 Object.defineProperty(exports, "RolesCommandableGrpcServiceV1", { enumerable: true, get: function () { return RolesCommandableGrpcServiceV1_1.RolesCommandableGrpcServiceV1; } });
 var RolesGrpcServiceV1_1 = require("./RolesGrpcServiceV1");

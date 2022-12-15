@@ -10,7 +10,7 @@
 			// Type of configuration. Possible values: "node", "mono".
 			"type": "node",
 			// Workspace relative or absolute path to the program.
-			"program": "${workspaceRoot}/bin/run.js",
+			"program": "${workspaceRoot}/bin/main.js",
 			//
 			"request": "launch",
 			// Automatically stop program after launch.
@@ -28,7 +28,10 @@
 			// Enable TypeScript debugging
 			"sourceMaps": true,
 			// Redirect VS to find compiled code
-			"outDir": "${workspaceRoot}/obj"
+			"outDir": "${workspaceRoot}/obj",
+			"env": {
+				"HTTP_ENABLED": "true"
+			}
 		},
 		{
 			// Name of configuration; appears in the launch configuration drop down menu.

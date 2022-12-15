@@ -7,7 +7,7 @@ const RolesMongoDbPersistence_1 = require("../persistence/RolesMongoDbPersistenc
 const RolesFilePersistence_1 = require("../persistence/RolesFilePersistence");
 const RolesMemoryPersistence_1 = require("../persistence/RolesMemoryPersistence");
 const RolesController_1 = require("../logic/RolesController");
-const RolesHttpServiceV1_1 = require("../services/version1/RolesHttpServiceV1");
+const RolesCommandableHttpServiceV1_1 = require("../services/version1/RolesCommandableHttpServiceV1");
 const RolesCommandableGrpcServiceV1_1 = require("../services/version1/RolesCommandableGrpcServiceV1");
 const RolesGrpcServiceV1_1 = require("../services/version1/RolesGrpcServiceV1");
 class RolesServiceFactory extends pip_services3_components_nodex_1.Factory {
@@ -17,7 +17,7 @@ class RolesServiceFactory extends pip_services3_components_nodex_1.Factory {
         this.registerAsType(RolesServiceFactory.FilePersistenceDescriptor, RolesFilePersistence_1.RolesFilePersistence);
         this.registerAsType(RolesServiceFactory.MongoDbPersistenceDescriptor, RolesMongoDbPersistence_1.RolesMongoDbPersistence);
         this.registerAsType(RolesServiceFactory.ControllerDescriptor, RolesController_1.RolesController);
-        this.registerAsType(RolesServiceFactory.HttpServiceDescriptor, RolesHttpServiceV1_1.RolesHttpServiceV1);
+        this.registerAsType(RolesServiceFactory.CommandableHttpServiceDescriptor, RolesCommandableHttpServiceV1_1.RolesCommandableHttpServiceV1);
         this.registerAsType(RolesServiceFactory.CommandableGrpcServiceDescriptor, RolesCommandableGrpcServiceV1_1.RolesCommandableGrpcServiceV1);
         this.registerAsType(RolesServiceFactory.GrpcServiceDescriptor, RolesGrpcServiceV1_1.RolesGrpcServiceV1);
     }
@@ -28,7 +28,7 @@ RolesServiceFactory.MemoryPersistenceDescriptor = new pip_services3_commons_node
 RolesServiceFactory.FilePersistenceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "persistence", "file", "*", "1.0");
 RolesServiceFactory.MongoDbPersistenceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "persistence", "mongodb", "*", "1.0");
 RolesServiceFactory.ControllerDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "controller", "default", "*", "1.0");
-RolesServiceFactory.HttpServiceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "service", "http", "*", "1.0");
+RolesServiceFactory.CommandableHttpServiceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "service", "commandable-http", "*", "1.0");
 RolesServiceFactory.CommandableGrpcServiceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "service", "commandable-grpc", "*", "1.0");
 RolesServiceFactory.GrpcServiceDescriptor = new pip_services3_commons_nodex_1.Descriptor("service-roles", "service", "grpc", "*", "1.0");
 //# sourceMappingURL=RolesServiceFactory.js.map
