@@ -70,7 +70,7 @@ Example of microservice configuration
 
 - descriptor: "service-roles:controller:default:default:1.0"
 
-- descriptor: "service-roles:service:http:default:1.0"
+- descriptor: "service-roles:service:commandable-http:default:1.0"
   connection:
     protocol: "http"
     host: "0.0.0.0"
